@@ -14,7 +14,7 @@ function Header() {
         <Container className="Headers">
           <Row className="headerRow">
             <Col className="navbarCol" onClick={refreshPage}>
-              <h3 clssName="navbarName" >TECOW Finance Manager</h3>
+              <h3 className="navbarName" >TECOW Finance Manager</h3>
             </Col>
           </Row>
           <Row className="headerRow"> 
