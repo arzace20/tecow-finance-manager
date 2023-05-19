@@ -32,20 +32,20 @@ function ReportPage() {
         </thead>
         <tbody>
           {reportData.map((row) => (
-            <tr key={row.memberId}>
-              <td>{row.memberId}</td>
-              <td>{row.offerings.weekly}</td>
-              <td>{row.offerings.tithe}</td>
-              <td>{row.offerings.special}</td>
-              <td>{row.offerings.buldingFund}</td>
-              <td>{row.offerings.misc}</td>
+            <tr key={row._id}>
+              <td>{row._id}</td>
+              <td>{row.weekly}</td>
+              <td>{row.tithe}</td>
+              <td>{row.special}</td>
+              <td>{row.buldingFund}</td>
+              <td>{row.misc}</td>
               <td>
                 {[
-                  row.offerings.weekly,
-                  row.offerings.tithe,
-                  row.offerings.special,
-                  row.offerings.buildingFund,
-                  row.offerings.misc,
+                  row.weekly,
+                  row.tithe,
+                  row.special,
+                  row.buildingFund,
+                  row.misc,
                 ].reduce((acc, cur) => acc + cur, 0)}
               </td>
             </tr>

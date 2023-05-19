@@ -18,10 +18,10 @@ function Header() {
             </Col>
           </Row>
           <Row className="headerRow"> 
-            <Col className="headerButtons"><HomeButton className="homeButton" buttonName="Home" path="/"/></Col>
-            <Col className="headerButtons"><HomeButton className="homeButton" buttonName="Deposit" path="/deposit"/></Col>
-            <Col className="headerButtons"><HomeButton className="homeButton" buttonName="Expense" path="/expense"/></Col>
-            <Col className="headerButtons"><HomeButton className="homeButton" buttonName="Report" path="/report"/></Col>
+            <Col className="headerButtons"><HomeButton className="homeButton" buttonName="TECOW Finance Manager" path="/"/></Col>
+            <Col className="headerButtons"><HomeButton className="homeButton" buttonName="Deposits" path="/deposit"/></Col>
+            <Col className="headerButtons"><HomeButton className="homeButton" buttonName="Expenses" path="/expense"/></Col>
+            <Col className="headerButtons"><HomeButton className="homeButton" buttonName="Login" path="/login"/></Col>
           </Row>
         </Container>
       </Navbar>
