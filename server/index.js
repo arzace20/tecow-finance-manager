@@ -52,35 +52,51 @@ app.get("/api", (req, res) => {
     res.json({ message: "Hello from server!"});
 });
 
-app.get('/report', async (req, res) => {
-  try {
-    const deposits = await Deposit.find();
-    console.log(deposits);
-    const reportData = [];
-    for (const deposit of deposits) {
-      const member = await Deposit.findOne({ memberId: deposit.memberId });
-      const weekly = deposit.offerings.find(o => o.type === 'weekly')?.amount || 0;
-      const tithe = deposit.offerings.find(o => o.type === 'tithe')?.amount || 0;
-      const special = deposit.offerings.find(o => o.type === 'special')?.amount || 0;
-      const building = deposit.offerings.find(o => o.type === 'building')?.amount || 0;
-      const misc = deposit.offerings.find(o => o.type === 'misc')?.amount || 0;
-      const total = weekly + tithe + special + building + misc;
-      reportData.push({
-        memberId: member.memberId,
-        weekly,
-        tithe,
-        special,
-        building,
-        misc,
-        total
-      });
-    }
-    res.send(reportData);
-  } catch (err) {
-    console.error('Error fetching report data:', err);
-    res.status(500).send('Error fetching report data');
-  }
+app.get('/report', (req, res) => {
+  // Get the MongoDB connection
+  const db = mongoose.connection;
+
+  // Wait for the connection to be established
+  db.once('open', () => {
+    // Run the MongoDB query
+    const results = db.collection('deposits').aggregate([
+      {
+        $group: {
+          "_id": "$memberId",
+          "weekly": {
+            "$sum": "$offerings.weekly"
+          },
+          "tithe": {
+            "$sum": "$offerings.tithe"
+          },
+          "special": {
+            "$sum": "$offerings.special"
+          },
+          "buildingFund": {
+            "$sum": "$offerings.buildingFund"
+          },
+          "misc": {
+            "$sum": "$offerings.misc"
+          }
+        }
+      }
+    ]);
+
+    // Convert the results to a JSON object
+    const reportData = results.map(result => ({
+      _id: result._id,
+      weekly: result.weekly,
+      tithe: result.tithe,
+      special: result.special,
+      buildingFund: result.buildingFund,
+      misc: result.misc
+    }));
+
+    // Send the JSON response
+    res.json(reportData);
+  });
 });
+
 
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../app/build', 'index.html'));
