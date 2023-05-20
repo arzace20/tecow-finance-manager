@@ -14,7 +14,7 @@ function Header() {
         <Container className="Headers">
           <Row className="headerRow">
             <Col className="navbarCol" onClick={refreshPage}>
-              <h3 className="navbarName" >TECOW Finance Manager</h3>
+              <h3 className="headerWebsiteName" >TECOW Finance Manager</h3>
             </Col>
           </Row>
           <Row className="headerRow"> 
@@ -23,9 +23,10 @@ function Header() {
             <Col className="headerButtons"><HomeButton className="homeButton" buttonName="Expense" path="/expense"/></Col>
             <Col className="headerButtons"><HomeButton className="homeButton" buttonName="Report" path="/report"/></Col>
           </Row>
+          <Row><img src="./images/background_church.jpg" alt="church" /></Row>
         </Container>
       </Navbar>
-      <h1 className="headerWebsiteName">TECOW Finance Manager</h1>
+      
     </div>
   );
 

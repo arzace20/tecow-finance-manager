@@ -1,6 +1,6 @@
 
 .headerWebsiteName {
-    background: url("../images/WebsiteLogo.png") no-repeat;
+    
     background-position-x: 50%;
     background-position-y: 72%;
     margin: auto;
@@ -8,7 +8,7 @@
     color: #3E2B1C;
     font-weight: 700;
     display: block;
-    font-family: "Playfair Display", serif;
+    font-family: 'Junge', serif;
     padding-top: 116px;
     padding-bottom: 60px;
     font-size: 48px;
@@ -16,7 +16,6 @@
   
   @media screen and (max-width: 800px) {
     .homeNavBar {
-      background-color: #f1eade;
       height: 26px;
     }
     .homeButton {
@@ -56,7 +55,7 @@
     padding: 0 0 0 0;
   }
   .homeNavBar {
-    background-color: #f1eade;
+    background: url("../images/background_church.jpg") no-repeat;
     height: 56px;
   }
   
@@ -74,7 +73,7 @@
     width: 190px;
     color: #3E2B1C;
     font-weight: 700;
-    font-family: "Playfair Display", serif;
+    font-family: 'Junge', serif;
     font-size: 22px;
     padding: 12px 0 5px 0;
     height: 56px;
