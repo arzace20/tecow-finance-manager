@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import Button from 'react-bootstrap/Button';
+import Table from 'react-bootstrap/Table';
+import "./Reports.css"
 
 function ReportPage() {
   const [reportData, setReportData] = useState([]);
@@ -16,18 +19,18 @@ function ReportPage() {
 
   return (
     <div>
-      <h1>Monthly Report</h1>
-      <button onClick={handleReportClick}>Generate Report</button>
-      <table>
+      <Button className='ReportButton'>Monthly Report</Button>
+      <Button className='ReportButton' onClick={handleReportClick}>Generate Report</Button>
+      <Table striped bordered hover>
         <thead>
           <tr>
-            <th>Member ID</th>
-            <th>Weekly Offering</th>
-            <th>Tithe</th>
-            <th>Special</th>
-            <th>Building</th>
-            <th>Misc</th>
-            <th>Total</th>
+            <th className='TableTypes'>Member ID</th>
+            <th className='TableTypes'>Weekly Offering</th>
+            <th className='TableTypes'>Tithe</th>
+            <th className='TableTypes'>Special</th>
+            <th className='TableTypes'>Building</th>
+            <th className='TableTypes'>Misc</th>
+            <th className='TableTypes'>Total</th>
           </tr>
         </thead>
         <tbody>
@@ -51,7 +54,7 @@ function ReportPage() {
             </tr>
           ))}
         </tbody>
-      </table>
+      </Table>
     </div>
   );
 }

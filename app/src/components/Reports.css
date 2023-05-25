@@ -1,0 +1,20 @@
+.ReportButton {
+    margin: auto;
+    max-width: 950px;
+    width: 190px;
+    height: 56px;
+    font-family: 'Jura', sans-serif;
+    border: 1px solid black;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+}
+
+.TableTypes {
+    font-family: 'Jura', sans-serif;
+    padding: 0 5% 0 5%;
+    width: 10%;
+    border: 1px solid black;
+}
