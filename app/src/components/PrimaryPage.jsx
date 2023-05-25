@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
+import "./PrimaryPage.css"
+import Button from 'react-bootstrap/Button';
 
 const PrimaryPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -45,7 +47,7 @@ const PrimaryPage = () => {
 
   return (
     <div>
-      <button onClick={() => setIsModalOpen(true)}>New Entry</button>
+      <Button className='newEntryButton' onClick={() => setIsModalOpen(true)}>New Entry</Button>{' '}
       <Modal
         isOpen={isModalOpen}
         onRequestClose={closeModal}

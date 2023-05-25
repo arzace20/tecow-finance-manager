@@ -9,9 +9,10 @@
     font-weight: 700;
     display: block;
     font-family: 'Junge', serif;
-    padding-top: 116px;
-    padding-bottom: 60px;
-    font-size: 48px;
+    padding-top: 0px;
+    padding-bottom: 20%;
+    padding-right: 80%;
+    font-size: 100%;
   }
   
   @media screen and (max-width: 800px) {
