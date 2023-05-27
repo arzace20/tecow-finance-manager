@@ -15,15 +15,15 @@ function Header() {
           <Row className="headerRow">
             <Col className="navbarCol" onClick={refreshPage}>
               <h3 className="headerWebsiteName" >TECOW Finance Manager</h3>
+              <button className="homeButton11" path="/">testing</button>
             </Col>
-          </Row>
-          <Row className="headerRow"> 
+            <Col className="headerButtons"></Col>
             <Col className="headerButtons"><HomeButton className="homeButton" buttonName="Home" path="/"/></Col>
             <Col className="headerButtons"><HomeButton className="homeButton" buttonName="Deposit" path="/deposit"/></Col>
             <Col className="headerButtons"><HomeButton className="homeButton" buttonName="Expense" path="/expense"/></Col>
             <Col className="headerButtons"><HomeButton className="homeButton" buttonName="Report" path="/report"/></Col>
           </Row>
-          <Row><img src="./images/background_church.jpg" alt="church" /></Row>
+          <Row><img src="./images/background_church.jpg" alt="church" className="backgroundImg"/></Row>
         </Container>
       </Navbar>
       
