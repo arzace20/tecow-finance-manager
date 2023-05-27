@@ -70,9 +70,10 @@ const PrimaryPage = () => {
         }}
       >
       {isModalOpen && (
-        <div>
+        <div className='entryDiv'>
           <div>
             <input
+              className='entryPlaceholder'
               type="text"
               placeholder="Congregation Member Name"
               value={memberName}
@@ -80,46 +81,51 @@ const PrimaryPage = () => {
             />
           </div>
           <div>
-            <h3>Weekly Offering</h3>
+            <h3 className='entryTitle'>Weekly Offering</h3>
             <input
+              className='entryPlaceholder'
               type="text"
               value={weeklyOffering}
               onChange={(e) => setWeeklyOffering(e.target.value)}
             />
           </div>
           <div>
-            <h3>Tithe</h3>
+            <h3 className='entryTitle'>Tithe</h3>
             <input
+              className='entryPlaceholder'
               type="text"
               value={tithe}
               onChange={(e) => setTithe(e.target.value)}
             />
           </div>
           <div>
-            <h3>Special Offering</h3>
+            <h3 className='entryTitle'>Special Offering</h3>
             <input
+              className='entryPlaceholder'
               type="text"
               value={specialOffering}
               onChange={(e) => setSpecialOffering(e.target.value)}
             />
           </div>
           <div>
-            <h3>Building Fund</h3>
+            <h3 className='entryTitle'>Building Fund</h3>
             <input
+              className='entryPlaceholder'
               type="text"
               value={buildingFund}
               onChange={(e) => setBuildingFund(e.target.value)}
             />
           </div>
           <div>
-            <h3>Miscellaneous</h3>
+            <h3 className='entryTitle'>Miscellaneous</h3>
             <input
+              className='entryPlaceholder'
               type="text"
               value={misc}
               onChange={(e) => setMisc(e.target.value)}
             />
           </div>
-          <button onClick={handleSubmit}>Submit</button>
+          <button className='newEntryButton' onClick={handleSubmit}>Submit</button>
         </div>
       )}
       </Modal>
