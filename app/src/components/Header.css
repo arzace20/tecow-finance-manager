@@ -1,3 +1,8 @@
+.backgroundImg {
+  position:relative;
+  z-index: 3;
+}
+
 
 .headerWebsiteName {
     
@@ -7,9 +12,9 @@
     text-align: center;
     color: black;
     font-weight: 700;
-    display: block;
+    display: inline;;
     font-family: 'Junge', serif;
-    padding-top: 0px;
+    padding-top: 1%;
     padding-bottom: 20%;
     padding-right: 80%;
     font-size: 100%;
@@ -18,6 +23,7 @@
   @media screen and (max-width: 800px) {
     .homeNavBar {
       height: 26px;
+      z-index: 1;
     }
     .homeButton {
       width: 95px;
@@ -45,6 +51,9 @@
       padding-top: 58px;
       padding-bottom: 30px;
       font-size: 24px;
+    }
+    .homeButton11 {
+      display: inline;
     }
   }
   
