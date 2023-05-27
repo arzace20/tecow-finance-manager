@@ -5,7 +5,7 @@ import {Container, Row, Col, Navbar} from "react-bootstrap"
 
 /* <Row><img src="./images/background_church.jpg" alt="church" className="backgroundImg"/></Row> 
 이거왜이래??? 11 and none
-*/
+*/  
 
 function Header() {
   function refreshPage(){
