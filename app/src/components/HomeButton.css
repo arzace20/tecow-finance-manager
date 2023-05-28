@@ -5,17 +5,15 @@
     max-width: 950px;
     width: 190px;
     height: 56px;
-    font-family: "Playfair Display";
+    font-family: 'Junge', serif;
     border: none;
     text-decoration: none;
     margin: 0;
     padding: 0;
-    background-color: #f1eade;
   }
 
   .homeNavBar {
-    background-color: #f1eade;
-    height: 56px;
+    height: auto;
   }
 
   .navbarCol {
@@ -28,16 +26,14 @@
     margin: auto;
     width: 80px;
     height: 26px;
-    font-family: "Playfair Display";
+    font-family: 'Junge', serif;
     border: none;
     text-decoration: none;
     margin: 0;
     padding: 0;
-    background-color: #f1eade;
   }
 
   .homeNavBar {
-    background-color: #f1eade;
     height: 56px;
   }
 
