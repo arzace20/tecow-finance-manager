@@ -1,8 +1,13 @@
 import React from 'react'
 import Header from './Header';
 import PrimaryPage from './PrimaryPage';
+import Deposit from './Deposit';
 import Reports from './Reports';
+import Home from "./Home";
+import Login from "./Login";
+import Footer from "./Footer";
 import './App.css';
+import {Route, Routes} from "react-router-dom";
 
 function App() {
   return (
@@ -10,7 +15,14 @@ function App() {
       <Header />
       <PrimaryPage />
       <Reports />
-    </div>
+    <Routes>
+      <Route path="/" component={Home} exact />
+      <Route path="/deposit" component={Deposit} />
+      <Route path="/expenses" component={Reports} />
+      <Route path="/login" component={Login} />
+    </Routes>
+    <Footer />
+  </div>
   );
 }
 
