@@ -1,0 +1,36 @@
+.footerContainer {
+    width: 950px;
+  }
+  
+  
+  .footerCards  {
+    background: #f1eade;
+    padding: 30px 30px 30px 30px;
+  }
+  
+  .footerTitle {
+    color: #3E2B1C;
+    font-weight: bold;
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .footerText {
+    color: #3E2B1C;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  .footerIconContainer {
+    margin: auto;
+    text-align: center;
+  }
+  
+  .footerIcons {
+    margin: 0 2px 0 2px;
+    width: 20px;
+    height: 20px;
+  }
+  
