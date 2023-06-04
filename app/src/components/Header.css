@@ -5,19 +5,16 @@
 
 
 .headerWebsiteName {
-    
-    background-position-x: 50%;
-    background-position-y: 72%;
     margin: auto;
-    text-align: center;
     color: black;
     font-weight: 700;
     display: inline;;
     font-family: 'Junge', serif;
     padding-top: 1%;
     padding-bottom: 20%;
-    padding-right: 80%;
+    padding-right: 10%;
     font-size: 100%;
+    width: 20%;
   }
   
   @media screen and (max-width: 800px) {
@@ -39,18 +36,18 @@
       height: 26px;
     }
     .headerWebsiteName {
-      background: url("../images/WebsiteLogo.png") no-repeat;
       background-position-x: 50%;
       background-position-y: 72%;
       margin: auto;
       text-align: center;
-      color: #3E2B1C;
+      font-family: 'Junge', serif;
+      color: black;
       font-weight: 700;
-      display: block;
-      font-family: "Playfair Display", serif;
-      padding-top: 58px;
-      padding-bottom: 30px;
-      font-size: 24px;
+      display: inline;;
+      padding-top: 1%;
+      padding-bottom: 20%;
+      padding-right: 20%;
+      font-size: 100%;
     }
     .homeButton11 {
       display: inline;
@@ -59,14 +56,14 @@
   
   .homeButton {
     width: 190px;
+    height: 100px;
   }
   
   .headerButtons {
     padding: 0 0 0 0;
   }
   .homeNavBar {
-    background: url("../images/background_church.jpg") no-repeat;
-    height: 56px;
+    height: 60px;
   }
   
   
@@ -81,11 +78,15 @@
   .NavbarName {
     margin: auto;
     width: 190px;
-    color: #3E2B1C;
+    color: black;
     font-weight: 700;
     font-family: 'Junge', serif;
     font-size: 22px;
     padding: 12px 0 5px 0;
     height: 56px;
+    display: inline;
   }
   
+  .headerRow {
+    width: 100%;
+  }

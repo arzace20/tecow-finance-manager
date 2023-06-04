@@ -3,7 +3,13 @@ import HomeButton from "./HomeButton";
 import "./Header.css"
 import {Container, Row, Col, Navbar} from "react-bootstrap"
 
-
+/*          <Row className="headerRow"> 
+            <Col className="headerButtons"><button className="homeButton" path="/deposit">testing</button></Col>
+            <Col className="headerButtons"><button className="homeButton" buttonName="TECOW Finance Manager" path="/"/></Col>
+            <Col className="headerButtons"><button className="homeButton" buttonName="Deposits" path="/deposit"/></Col>
+            <Col className="headerButtons"><button className="homeButton" buttonName="Expenses" path="/expenses"/></Col>
+            <Col className="headerButtons"><button className="homeButton" buttonName="Login" path="/login"/></Col>
+          </Row> */
 
 function Header() {
   function refreshPage(){
@@ -16,17 +22,19 @@ function Header() {
           <Row className="headerRow">
             <Col className="navbarCol" onClick={refreshPage}>
               <h3 className="headerWebsiteName" >TECOW Finance Manager</h3>
-              
+            </Col>
+            <Col>
+              <h3 className="headerWebsiteName">Deposits</h3>
+            </Col>
+            <Col>
+              <h3 className="headerWebsiteName">Expenses</h3>
+            </Col>
+            <Col>
+              <h3 className="headerWebsiteName">Log in</h3>
             </Col>
           </Row>
           
-          <Row className="headerRow"> 
-            <Col className="headerButtons"><button className="homeButton" path="/deposit">testing</button></Col>
-            <Col className="headerButtons"><HomeButton className="homeButton" buttonName="TECOW Finance Manager" path="/"/></Col>
-            <Col className="headerButtons"><HomeButton className="homeButton" buttonName="Deposits" path="/deposit"/></Col>
-            <Col className="headerButtons"><HomeButton className="homeButton" buttonName="Expenses" path="/expenses"/></Col>
-            <Col className="headerButtons"><HomeButton className="homeButton" buttonName="Login" path="/login"/></Col>
-          </Row>
+
       </Navbar>
       
     </div>
