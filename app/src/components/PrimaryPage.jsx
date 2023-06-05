@@ -79,6 +79,8 @@ const PrimaryPage = () => {
               value={memberName}
               onChange={(e) => setMemberName(e.target.value)}
             />
+            <button className='openMoreButton' onClick={handleSubmit}>▷</button>
+            <p className='infoIcon'>ⓘ</p>
           </div>
           <div>
             <h3 className='entryTitle'>Weekly Offering</h3>
@@ -125,6 +127,7 @@ const PrimaryPage = () => {
               onChange={(e) => setMisc(e.target.value)}
             />
           </div>
+
           <button className='newEntryButton' onClick={handleSubmit}>Submit</button>
         </div>
       )}

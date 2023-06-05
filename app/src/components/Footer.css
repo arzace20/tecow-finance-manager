@@ -1,36 +1,30 @@
 .footerContainer {
-    width: 950px;
+    width: 100%;
   }
   
   
   .footerCards  {
-    background: #f1eade;
-    padding: 30px 30px 30px 30px;
+    padding: 5% 5% 5% 5%;
+    width: 20%;
   }
   
   .footerTitle {
-    color: #3E2B1C;
+    color: black;
     font-weight: bold;
-    font-family: "Playfair Display", serif;
+    font-family: 'Junge', serif;
     font-size: 20px;
     text-align: center;
   }
   
   .footerText {
-    color: #3E2B1C;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
+    color: black;
+    font-family: 'Junge', serif;
+    font-size: 100%;
     text-align: center;
   }
   
   .footerIconContainer {
     margin: auto;
     text-align: center;
-  }
-  
-  .footerIcons {
-    margin: 0 2px 0 2px;
-    width: 20px;
-    height: 20px;
   }
   
