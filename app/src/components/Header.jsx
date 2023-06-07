@@ -16,26 +16,22 @@ function Header() {
     window.location.reload();
   }
 
+
   return (
     <div className="headerDiv">
-      <Navbar fixed="top" expand="lg" className="homeNavBar">
           <Row className="headerRow">
-            <Col className="navbarCol" onClick={refreshPage}>
-              <h3 className="headerWebsiteName" >TECOW Finance Manager</h3>
-            </Col>
-            <Col>
+            <Col className="navbarCol" >
+              <h3 className="headerWebsiteName" onClick={refreshPage}>TECOW Finance Manager</h3>
+              <img src="./images/deposit.png" alt="deposit" className="iconHeaderImg"/>
+              <HomeButton className="headerWebsiteName" buttonName="Deposits" path="/deposit"/>
               <h3 className="headerWebsiteName">Deposits</h3>
-            </Col>
-            <Col>
+              <img src="./images/expense.png" alt="expense" className="iconHeaderImg"/>
               <h3 className="headerWebsiteName">Expenses</h3>
-            </Col>
-            <Col>
+              <img src="./images/login.png" alt="log in" className="iconHeaderImg"/>
               <h3 className="headerWebsiteName">Log in</h3>
+              <HomeButton className="headerWebsiteName" buttonName="Log in" path="/login"/>
             </Col>
           </Row>
-          
-
-      </Navbar>
       
     </div>
   );
