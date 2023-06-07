@@ -5,7 +5,7 @@ import {Container, Row, Col, Image} from "react-bootstrap";
 function Home() {
   return (
     <Container className="homeContainer">
-      <img src="./images/background_church.jpg" alt="church" className="backgroundImg"/>
+      <h1 className="homeChurchName">Toronto Evangelical Church of the Word</h1>
     </Container>
   );
 }

@@ -9,17 +9,22 @@ import Footer from "./Footer";
 import './App.css';
 import {Route, Routes} from "react-router-dom";
 
+
+/*      <PrimaryPage />
+      <Reports /> 
+      */
 function App() {
   return (
     <div className="appBody">
       <Header />
-      <PrimaryPage />
-      <Reports />
+
+            
+
     <Routes>
-      <Route path="/" component={Home} exact />
-      <Route path="/deposit" component={Deposit} />
-      <Route path="/expenses" component={Reports} />
-      <Route path="/login" component={Login} />
+      <Route path="/" element={<Home />} />
+      <Route path="/deposit" element={<Deposit />} />
+      <Route path="/expenses" element={<Reports />} />
+      <Route path="/login" element={<Login/>} />
     </Routes>
     <Footer />
   </div>

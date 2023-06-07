@@ -5,14 +5,12 @@
 
 
 .headerWebsiteName {
-    margin: auto;
     color: black;
     font-weight: 700;
     display: inline;;
     font-family: 'Junge', serif;
-    padding-top: 1%;
-    padding-bottom: 20%;
     padding-right: 10%;
+    vertical-align: middle;
     font-size: 100%;
     width: 20%;
   }
@@ -62,31 +60,21 @@
   .headerButtons {
     padding: 0 0 0 0;
   }
-  .homeNavBar {
-    height: 60px;
-  }
-  
-  
+
   .headerDiv {
   
   }
   .navbarCol {
-    padding: 0 0 0 0;
+    padding: auto;
     margin: 0 0 0 0;
   }
-  
-  .NavbarName {
-    margin: auto;
-    width: 190px;
-    color: black;
-    font-weight: 700;
-    font-family: 'Junge', serif;
-    font-size: 22px;
-    padding: 12px 0 5px 0;
-    height: 56px;
-    display: inline;
-  }
-  
+
   .headerRow {
-    width: 100%;
+    width: auto;
+    height: auto;
+  }
+
+  .iconHeaderImg {
+    width: 1.5%;
+    padding: 0 2px 0 2px;
   }

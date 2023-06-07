@@ -1,0 +1,12 @@
+.homeChurchName {
+    color: black;
+    font-weight: 700;
+    display: block;
+    font-family: 'Junge', serif;
+    text-align: center;
+    font-size: 25px;
+    width: auto;
+    padding: 25% 40% 25% 0;
+    background-image: url("../images/background_church.jpg");
+    background-repeat: no-repeat;
+}
