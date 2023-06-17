@@ -24,11 +24,9 @@ function Header() {
               <h3 className="headerWebsiteName" onClick={refreshPage}>TECOW Finance Manager</h3>
               <img src="./images/deposit.png" alt="deposit" className="iconHeaderImg"/>
               <HomeButton className="headerWebsiteName" buttonName="Deposits" path="/deposit"/>
-              <h3 className="headerWebsiteName">Deposits</h3>
               <img src="./images/expense.png" alt="expense" className="iconHeaderImg"/>
-              <h3 className="headerWebsiteName">Expenses</h3>
+              <HomeButton className="headerWebsiteName" buttonName="Expenses" path="/reports"/>
               <img src="./images/login.png" alt="log in" className="iconHeaderImg"/>
-              <h3 className="headerWebsiteName">Log in</h3>
               <HomeButton className="headerWebsiteName" buttonName="Log in" path="/login"/>
             </Col>
           </Row>
