@@ -5,10 +5,13 @@
     font-weight: 700;
     display: inline;;
     font-family: 'Junge', serif;
-    padding-right: 10%;
+    padding-right: 15%;  
     vertical-align: middle;
     font-size: 100%;
-    width: 2 0%;
+    width: 20%;
+    border-radius: 0;
+    border: none;
+    background-color: white;
   }
 
   .homeNavBar {
