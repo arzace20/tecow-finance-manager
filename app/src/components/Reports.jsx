@@ -18,10 +18,10 @@ function ReportPage() {
   };
 
   return (
-    <div>
+    <div className='reportDiv'>
       <Button className='ReportButton'>Monthly Report</Button>
       <Button className='ReportButton' onClick={handleReportClick}>Generate Report</Button>
-      <Table striped bordered hover>
+      <Table striped bordered hover className='reportTable'>
         <thead>
           <tr>
             <th className='TableTypes'>Member ID</th>

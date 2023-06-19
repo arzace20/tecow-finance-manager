@@ -7,9 +7,10 @@
     border: 1px solid black;
     font-weight: 600;
     text-decoration: none;
-    margin: 0;
+    margin: 5% 0 5% 5%;
     padding: 0;
     border-radius: 5px;
+
 }
 
 .TableTypes {
@@ -17,4 +18,19 @@
     padding: 0 5% 0 5%;
     width: 10%;
     border: 1px solid black;
+    background-color: white;
+
+}
+.reportTable {
+    display: block;
+    margin: auto;
+    width: 90%;
+    padding-bottom: 30%;
+}
+
+
+.reportDiv {
+    background-image: url("../images/background_church.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }

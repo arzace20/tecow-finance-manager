@@ -15,7 +15,7 @@ return (
   <Link to={props.path}>
     <button
       className="homeButtons"
-      style={{ backgroundColor: isMouseOver ? "#DADADA" : "#FFFFFF", color: isMouseOver ? "#FFFFFF" : "#DADADA"}}
+      style={{ backgroundColor: isMouseOver ? "#000000" : "#FFFFFF", color: isMouseOver ? "#FFFFFF" : "#000000"}}
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
     >

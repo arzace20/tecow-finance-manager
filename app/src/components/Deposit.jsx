@@ -1,20 +1,59 @@
 import React, {useEffect, useState} from "react";
 import "./Deposit.css"
 import {Container, Row, Col, Image} from "react-bootstrap"
+import Table from 'react-bootstrap/Table';
+
 
 function Deposit() {
   
   return (
-    <div className="aboutContainer">
-      <Container>
+      <Container className="depositContainer">
         <Row>
           <Col>
-            <h1 className="aboutTitle">OUR STORY</h1>
-            <p className="aboutText">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.</p>
+            <button className="loginButton12">New Entry</button>
+            <button className="loginButton12">New Member</button>
+            <button className="loginButton12">Report</button>
+          </Col>
+          <Col>
+          <Table striped bordered hover className="depositTable">
+      <thead className="tableHead">
+        <tr>
+          <th>#</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Username</th>
+          <th>Sample</th>
+          <th>Sample</th>
+          <th>Sample</th>
+          <th>Sample</th>
+          <th>Sample</th>
+          <th>Sample</th>
+          <th>Sample</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr className="tableRow1">
+          <td>1</td>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr className="tableRow1">
+          <td>2</td>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr className="tableRow1">
+          <td>3</td>
+          <td colSpan={2}>Larry the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </Table>
           </Col>
         </Row>
       </Container>
-    </div>
   )
 }
 

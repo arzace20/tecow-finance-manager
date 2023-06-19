@@ -5,10 +5,7 @@
 
 
 .headerWebsiteName {
-    color: black;
-    font-weight: 700;
-    display: inline;;
-    font-family: 'Junge', serif;
+    display: inline;
     padding-right: 10%;
     vertical-align: middle;
     font-size: 100%;
@@ -62,7 +59,7 @@
   }
 
   .headerDiv {
-  
+    padding-bottom: 10px;
   }
   .navbarCol {
     padding: auto;
