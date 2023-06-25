@@ -55,3 +55,12 @@ background-position: center center;
 margin: 0;
 padding: 0;
 }
+
+.newEntryDiv {
+    background: url("../images/background_church.jpg") no-repeat;
+    height: 1000px;
+    background-size: cover;    
+    background-position: center center;
+    margin: 0;
+    padding: 0;
+}

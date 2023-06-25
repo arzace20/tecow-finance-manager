@@ -25,6 +25,7 @@ function App() {
       <Route path="/deposit" element={<Deposit />} />
       <Route path="/reports" element={<Reports />} />
       <Route path="/login" element={<Login/>} />
+      <Route path="/newEntry" element={<PrimaryPage/>} />
     </Routes>
     <Footer />
   </div>

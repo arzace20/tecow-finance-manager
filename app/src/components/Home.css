@@ -6,7 +6,9 @@
     text-align: center;
     font-size: 25px;
     width: auto;
-    padding: 25% 40% 25% 0;
+    padding: 25% 40% 25% 40%;
     background-image: url("../images/background_church.jpg");
     background-repeat: no-repeat;
+    background-size: cover;    
+    background-position: center center;
 }
