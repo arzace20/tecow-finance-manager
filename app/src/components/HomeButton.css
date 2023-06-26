@@ -5,38 +5,17 @@
     font-weight: 700;
     display: inline;;
     font-family: 'Junge', serif;
-    padding-right: 15%;  
+    padding: 0;  
     vertical-align: middle;
     font-size: 100%;
-    width: 20%;
+    width: auto;
     border-radius: 0;
     border: none;
-    background-color: white;
+    margin: 0 2% 0 0;
   }
 
   .homeNavBar {
     height: auto;
-  }
-
-  .navbarCol {
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
-  }
-}
-@media screen and (max-width: 800px) {
-  .homeButtons {
-    margin: auto;
-    width: 80px;
-    height: 26px;
-    font-family: 'Junge', serif;
-    border: none;
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .homeNavBar {
-    height: 56px;
   }
 
   .navbarCol {
