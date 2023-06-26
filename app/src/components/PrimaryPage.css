@@ -1,16 +1,4 @@
-.newEntryButton {
-    margin: auto;
-    max-width: 950px;
-    width: 190px;
-    height: 56px;
-    font-family: 'Jura', sans-serif;
-    border: 1px solid black;
-    font-weight: 600;
-    text-decoration: none;
-    margin: 5% 5% 0 5%;
-    padding: 0;
-    border-radius: 5px;
-}
+
 
 .openMoreButton {
     margin: auto;
@@ -39,12 +27,13 @@
     font-family: 'Jura', sans-serif;
     font-weight: 600;
     text-decoration: none;
-    margin: 5% 0 0 0;
+    margin: 5% 0 0 5%;
 }
 
 .entryPlaceholder {
     width: 50%;
     height: 40px;
+    margin: 0 0 0 5%;
 }
 
 .entryDiv {
@@ -53,7 +42,7 @@ height: 1000px;
 background-size: cover;    
 background-position: center center;
 margin: 0;
-padding: 0;
+padding: 5% 0 0 0;
 }
 
 .newEntryDiv {

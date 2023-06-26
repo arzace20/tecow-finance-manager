@@ -63,8 +63,8 @@ const PrimaryPage = () => {
             border: '1px solid #ccc',
             borderRadius: '4px',
             boxShadow: '0 2px 10px rgba(0, 0, 0, 0.25)',
-            width: '600px',
-            height: '450px',
+            width: '1200px',
+            height: '850px',
             padding: '20px'
           }
         }}
