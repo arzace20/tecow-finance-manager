@@ -14,7 +14,7 @@
 .depositTable {
     display: block;
     margin: auto;
-    width: 50%;
+    width: 80%;
     padding-top: 5%;
     padding-bottom: 30%;
 }
@@ -36,4 +36,11 @@
     background-image: url("../images/background_church.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.refreshPage {
+    font-family: 'Jura', sans-serif;
+    border: 1px solid black;
+    background-color: white; 
+    margin: 5% 10% 0 90%;
 }

@@ -11,17 +11,21 @@ import {Container, Row, Col, Navbar} from "react-bootstrap"
             <Col className="headerButtons"><button className="homeButton" buttonName="Login" path="/login"/></Col>
           </Row> */
 
-function Header() {
+  const Header = ({ history }) => {
   function refreshPage(){
     window.location.reload();
   }
+
+  const redirectToHome = () => {
+    window.location.href = '/';
+  };
 
 
   return (
     <div className="headerDiv">
           <Row className="headerRow">
             <Col className="navbarCol" >
-              <h3 className="headerWebsiteName" onClick={refreshPage}>TECOW Finance Manager</h3>
+              <h3 className="headerWebsiteName" onClick={redirectToHome}>TECOW Finance Manager</h3>
               <img src="./images/deposit.png" alt="deposit" className="iconHeaderImg"/>
               <HomeButton className="headerWebsiteName" buttonName="Deposits" path="/deposit"/>
               <img src="./images/expense.png" alt="expense" className="iconHeaderImg"/>
@@ -35,4 +39,5 @@ function Header() {
   );
 
 }
+  
 export default Header;

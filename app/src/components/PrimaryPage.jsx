@@ -46,7 +46,7 @@ const PrimaryPage = () => {
   };
 
   return (
-    <div>
+    <div className='newEntryDiv'>
       <Button className='newEntryButton' onClick={() => setIsModalOpen(true)}>New Entry</Button>{' '}
       <Modal
         isOpen={isModalOpen}
@@ -79,7 +79,7 @@ const PrimaryPage = () => {
               value={memberName}
               onChange={(e) => setMemberName(e.target.value)}
             />
-            <button className='openMoreButton' onClick={handleSubmit}>▷</button>
+            <button className='openMoreButton' onClick={() => setIsModalOpen(true) }>▷</button>
             <p className='infoIcon'>ⓘ</p>
           </div>
           <div>
