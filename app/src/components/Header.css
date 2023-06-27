@@ -8,7 +8,7 @@
     display: inline;
     padding-right: 10%;
     vertical-align: middle;
-    font-size: 100%;
+    font-size: 110%;
     width: 20%;
     font-family: 'Junge', serif;
     margin: 0 0 0 2%;
@@ -48,5 +48,5 @@
 
   .iconHeaderImg1 {
     width: 1.5%;
-    padding: 0 2px 0 51%;
+    padding: 0 2px 0 48%;
   }
