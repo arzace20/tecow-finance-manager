@@ -11,6 +11,11 @@ import Button from 'react-bootstrap/Button';
 /*window.location.href = "./PrimaryPage.jsx"; */
 
 const Deposit = () => {
+  const [isCollapsed, setIsCollapsed] = useState(true);
+
+  const toggleCollapse = () => {
+    setIsCollapsed(!isCollapsed);
+  };
   const [reportData, setReportData] = useState([]);
 
   const handleReportClick = async () => {
@@ -87,7 +92,7 @@ const Deposit = () => {
           <Button className='newEntryButton' >New Member</Button>{' '}
           <Button className='newEntryButton' >Report</Button>{' '}
           </div>
-        <Modal
+        <Modal 
           isOpen={isModalOpen}
           onRequestClose={closeModal}
           style={{
@@ -102,9 +107,12 @@ const Deposit = () => {
               border: '1px solid #ccc',
               borderRadius: '4px',
               boxShadow: '0 2px 10px rgba(0, 0, 0, 0.25)',
-              width: '1200px',
-              height: '850px',
-              padding: '20px'
+              width: '90%',
+              height: '110%',
+              padding: '20px',
+              left: '50%',
+              top: '50%',
+              transform: 'translate(-50%, -50%)',
             }
           }}
         >
@@ -118,8 +126,6 @@ const Deposit = () => {
                 value={memberName}
                 onChange={(e) => setMemberName(e.target.value)}
               />
-              <button className='openMoreButton' onClick={() => setIsModalOpen(true) }>▷</button>
-              <p className='infoIcon'>ⓘ</p>
             </div>
             <div>
               <h3 className='entryTitle'>Weekly Offering</h3>
@@ -166,8 +172,123 @@ const Deposit = () => {
                 onChange={(e) => setMisc(e.target.value)}
               />
             </div>
-  
-            <button className='newEntryButton' onClick={handleSubmit}>Submit</button>
+      <button onClick={toggleCollapse} className="collapseContentButton">↓ Other Offering Items </button>
+      {isCollapsed ? null : (
+        <div className="collapseContent">
+            <div>
+              <h3 className='entryTitle'>Easter</h3>
+              <input
+                className='entryPlaceholder'
+                type="text"
+                value={weeklyOffering}
+                onChange={(e) => setWeeklyOffering(e.target.value)}
+              />
+            </div>
+            <div>
+              <h3 className='entryTitle'>Revival</h3>
+              <input
+                className='entryPlaceholder'
+                type="text"
+                value={tithe}
+                onChange={(e) => setTithe(e.target.value)}
+              />
+            </div>
+            <div>
+              <h3 className='entryTitle'>Thanksgiving</h3>
+              <input
+                className='entryPlaceholder'
+                type="text"
+                value={specialOffering}
+                onChange={(e) => setSpecialOffering(e.target.value)}
+              />
+            </div>
+            <div>
+              <h3 className='entryTitle'>Christmas</h3>
+              <input
+                className='entryPlaceholder'
+                type="text"
+                value={buildingFund}
+                onChange={(e) => setBuildingFund(e.target.value)}
+              />
+            </div>
+            <div>
+              <h3 className='entryTitle'>Watchnight</h3>
+              <input
+                className='entryPlaceholder'
+                type="text"
+                value={misc}
+                onChange={(e) => setMisc(e.target.value)}
+              />
+            </div>
+            <div>
+              <h3 className='entryTitle'>Anniversary</h3>
+              <input
+                className='entryPlaceholder'
+                type="text"
+                value={misc}
+                onChange={(e) => setMisc(e.target.value)}
+              />
+            </div>
+            <div>
+              <h3 className='entryTitle'>Seminary</h3>
+              <input
+                className='entryPlaceholder'
+                type="text"
+                value={misc}
+                onChange={(e) => setMisc(e.target.value)}
+              />
+            </div>
+            <div>
+              <h3 className='entryTitle'>Theology</h3>
+              <input
+                className='entryPlaceholder'
+                type="text"
+                value={misc}
+                onChange={(e) => setMisc(e.target.value)}
+              />
+            </div>
+            <div>
+              <h3 className='entryTitle'>Automobile</h3>
+              <input
+                className='entryPlaceholder'
+                type="text"
+                value={misc}
+                onChange={(e) => setMisc(e.target.value)}
+              />
+            </div>
+            <div>
+              <h3 className='entryTitle'>Chairs</h3>
+              <input
+                className='entryPlaceholder'
+                type="text"
+                value={misc}
+                onChange={(e) => setMisc(e.target.value)}
+              />
+            </div>
+            <div>
+              <h3 className='entryTitle'>Misc</h3>
+              <input
+                className='entryPlaceholder'
+                type="text"
+                value={misc}
+                onChange={(e) => setMisc(e.target.value)}
+              />
+            </div>            
+            <div>
+              <h3 className='entryTitle'>Indigenous Mission</h3>
+              <input
+                className='entryPlaceholder'
+                type="text"
+                value={misc}
+                onChange={(e) => setMisc(e.target.value)}
+              />
+            </div>
+        </div>
+      )}
+      <div className="sumbitDeposit">
+      <button className='newEntryButton1' onClick={handleSubmit}>Submit</button>
+      </div>
+            
           </div>
         )}
         </Modal>
