@@ -26,12 +26,14 @@ import {Container, Row, Col, Navbar} from "react-bootstrap"
           <Navbar fixed="top" className="s1" >
             <Col className="navbarCol" >
               <h3 className="headerWebsiteName" onClick={redirectToHome}>TECOW Finance Manager</h3>
+              <div className="headerButtondiv">
               <img src="./images/deposit.png" alt="deposit" className="iconHeaderImg1"/>
               <HomeButton className="headerWebsiteName" buttonName="Deposits" path="/deposit"/>
               <img src="./images/expense.png" alt="expense" className="iconHeaderImg"/>
               <HomeButton className="headerWebsiteName" buttonName="Expenses" path="/reports"/>
               <img src="./images/login.png" alt="log in" className="iconHeaderImg"/>
               <HomeButton className="headerWebsiteName" buttonName="Log in" path="/login"/>
+              </div>
             </Col>
             </Navbar>
       

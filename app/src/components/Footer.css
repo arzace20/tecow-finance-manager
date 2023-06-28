@@ -1,12 +1,12 @@
 .footerContainer {
     width: 100%;
-    margin: 3% 0 0 0;
+    margin: 3% 0 3% 0;
   }
   
   .footerTitle {
     color: black;
     font-weight: bold;
-    font-family: 'Junge', serif;
+    font-family: 'Jura', sans-serif;
     font-size: 20px;
     text-align: center;
     display: inline;
@@ -14,7 +14,7 @@
   
   .footerText {
     color: black;
-    font-family: 'Junge', serif;
+    font-family: 'Jura', sans-serif;
     font-size: 100%;
     text-align: center;
   }
@@ -23,4 +23,6 @@
     margin: auto;
     text-align: center;
   }
-  
+  .tabelC1 {
+    width: 33.333%;
+  }
