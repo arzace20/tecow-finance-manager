@@ -5,6 +5,7 @@
 
 
 .headerWebsiteName {
+  position: absolute;
     display: inline;
     padding-right: 10%;
     vertical-align: middle;
@@ -25,11 +26,13 @@
   }
 
   .headerDiv {
-    padding-bottom: 35px;
+    padding-bottom: 3%;
+    background-color: white;
   }
   .navbarCol {
     padding: auto;
     margin: 0 0 0 0;
+    position: relative;
   }
 
   .headerRow {
@@ -37,13 +40,23 @@
     height: auto;
   }
 
+
+  .headerButtondiv {
+    position: absolute;
+    margin: 0 0 0 60%;
+  }
+
   .iconHeaderImg {
+
     width: 1.5%;
     padding: 0 2px 0 2px;
   }
 
   .s1 {
     margin: 1.5% 0 0 0;
+    display: grid;
+    grid-auto-flow: column;
+  grid-template-columns: 1fr;
   }
 
   .iconHeaderImg1 {
