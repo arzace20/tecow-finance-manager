@@ -38,7 +38,19 @@ const Deposit = () => {
     const [tithe, setTithe] = useState("");
     const [specialOffering, setSpecialOffering] = useState("");
     const [buildingFund, setBuildingFund] = useState("");
+    const [easter, setEaster] = useState("");
+    const [revival, setRevival] = useState("");
+    const [thanksgiving, setThanksgiving] = useState("");
+    const [christmas, setChristmas] = useState("");
+    const [watchnight, setWatchnight] = useState("");
+    const [anniversary, setAnniversary] = useState("");
+    const [seminary, setSeminary] = useState("");
+    const [theology, setTheology] = useState("");
+    const [automobile, setAutomobile] = useState("");
+    const [chairs, setChairs] = useState("");
+    const [indigenousMission, setIndigenousMission] = useState("");
     const [misc, setMisc] = useState("");
+
   
     const handleSubmit = async (event) => {
       event.preventDefault();
@@ -56,8 +68,21 @@ const Deposit = () => {
             special: specialOffering,
             buildingFund: buildingFund,
             misc: misc,
+            easter: easter,
+            revival: revival,
+            thanksgiving: thanksgiving,
+            christmas: christmas,
+            watchnight: watchnight,
+            anniversary: anniversary,
+            seminary: seminary,
+            theology: theology,
+            automobile: automobile,
+            chairs: chairs,
+            indigenousMission: indigenousMission
+
           })
         });
+        console.log(response);
         const data = await response.json();
         console.log(data);
       } catch (error) {
@@ -73,14 +98,6 @@ const Deposit = () => {
       setIsModalOpen(false);
     };
   
-
-
-
-
-
-
-
-
 
 
   return (
@@ -180,8 +197,8 @@ const Deposit = () => {
               <input
                 className='entryPlaceholder'
                 type="text"
-                value={weeklyOffering}
-                onChange={(e) => setWeeklyOffering(e.target.value)}
+                value={easter}
+                onChange={(e) => setEaster(e.target.value)}
               />
             </div>
             <div>
@@ -189,8 +206,8 @@ const Deposit = () => {
               <input
                 className='entryPlaceholder'
                 type="text"
-                value={tithe}
-                onChange={(e) => setTithe(e.target.value)}
+                value={revival}
+                onChange={(e) => setRevival(e.target.value)}
               />
             </div>
             <div>
@@ -198,8 +215,8 @@ const Deposit = () => {
               <input
                 className='entryPlaceholder'
                 type="text"
-                value={specialOffering}
-                onChange={(e) => setSpecialOffering(e.target.value)}
+                value={thanksgiving}
+                onChange={(e) => setThanksgiving(e.target.value)}
               />
             </div>
             <div>
@@ -207,8 +224,8 @@ const Deposit = () => {
               <input
                 className='entryPlaceholder'
                 type="text"
-                value={buildingFund}
-                onChange={(e) => setBuildingFund(e.target.value)}
+                value={christmas}
+                onChange={(e) => setChristmas(e.target.value)}
               />
             </div>
             <div>
@@ -216,8 +233,8 @@ const Deposit = () => {
               <input
                 className='entryPlaceholder'
                 type="text"
-                value={misc}
-                onChange={(e) => setMisc(e.target.value)}
+                value={watchnight}
+                onChange={(e) => setWatchnight(e.target.value)}
               />
             </div>
             <div>
@@ -225,8 +242,8 @@ const Deposit = () => {
               <input
                 className='entryPlaceholder'
                 type="text"
-                value={misc}
-                onChange={(e) => setMisc(e.target.value)}
+                value={anniversary}
+                onChange={(e) => setAnniversary(e.target.value)}
               />
             </div>
             <div>
@@ -234,8 +251,8 @@ const Deposit = () => {
               <input
                 className='entryPlaceholder'
                 type="text"
-                value={misc}
-                onChange={(e) => setMisc(e.target.value)}
+                value={seminary}
+                onChange={(e) => setSeminary(e.target.value)}
               />
             </div>
             <div>
@@ -243,8 +260,8 @@ const Deposit = () => {
               <input
                 className='entryPlaceholder'
                 type="text"
-                value={misc}
-                onChange={(e) => setMisc(e.target.value)}
+                value={theology}
+                onChange={(e) => setTheology(e.target.value)}
               />
             </div>
             <div>
@@ -252,8 +269,8 @@ const Deposit = () => {
               <input
                 className='entryPlaceholder'
                 type="text"
-                value={misc}
-                onChange={(e) => setMisc(e.target.value)}
+                value={automobile}
+                onChange={(e) => setAutomobile(e.target.value)}
               />
             </div>
             <div>
@@ -261,17 +278,8 @@ const Deposit = () => {
               <input
                 className='entryPlaceholder'
                 type="text"
-                value={misc}
-                onChange={(e) => setMisc(e.target.value)}
-              />
-            </div>
-            <div>
-              <h3 className='entryTitle'>Misc</h3>
-              <input
-                className='entryPlaceholder'
-                type="text"
-                value={misc}
-                onChange={(e) => setMisc(e.target.value)}
+                value={chairs}
+                onChange={(e) => setChairs(e.target.value)}
               />
             </div>            
             <div>
@@ -279,8 +287,8 @@ const Deposit = () => {
               <input
                 className='entryPlaceholder'
                 type="text"
-                value={misc}
-                onChange={(e) => setMisc(e.target.value)}
+                value={indigenousMission}
+                onChange={(e) => setIndigenousMission(e.target.value)}
               />
             </div>
         </div>
