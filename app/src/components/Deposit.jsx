@@ -32,6 +32,7 @@ const Deposit = () => {
   }
 
 
+
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [memberName, setMemberName] = useState("");
     const [weeklyOffering, setWeeklyOffering] = useState("");
@@ -314,13 +315,14 @@ const Deposit = () => {
           </tr>
         </thead>
         <tbody>
+          
           {reportData.map((row) => (
             <tr key={row._id}>
               <td>{row._id}</td>
               <td>{row.weekly}</td>
               <td>{row.tithe}</td>
               <td>{row.special}</td>
-              <td>{row.buldingFund}</td>
+              <td>{row.buildingFund}</td>
               <td>{row.misc}</td>
               <td>
                 {[
