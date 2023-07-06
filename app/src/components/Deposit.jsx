@@ -98,8 +98,14 @@ const Deposit = () => {
     const closeModal = () => {
       setIsModalOpen(false);
     };
-  
+    
+    const [reports, setReports] = useState([]);
 
+    useEffect(() => {
+      fetch("/report")
+        .then((res) => res.json())
+        .then((data) => setReports(data.report));
+      }, []);
 
   return (
       <Container className="depositContainer">
@@ -315,6 +321,14 @@ const Deposit = () => {
           </tr>
         </thead>
         <tbody>
+        {reports.map(report => {
+            return (
+              <div>
+                <p className="menuPrice">${report.id}</p>
+                <h2 className="menuName">{report.weekly}</h2>
+                <p className="menuDescription">{report.tithe}</p>
+              </div>
+          )})}
           
           {reportData.map((row) => (
             <tr key={row._id}>
