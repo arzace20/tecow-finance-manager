@@ -12,8 +12,9 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
+mongoose.connect('mongodb+srv://admin:Word0965@cluster0.pmmdn.mongodb.net/Church?retryWrites=true&w=majority', { useNewUrlParser: true  });
+  
 
-mongoose.connect('mongodb+srv://admin:Word0965@cluster0.pmmdn.mongodb.net/Church?retryWrites=true&w=majority', { useNewUrlParser: true });
 
 const depositSchema = new mongoose.Schema({
   memberId: Number,
