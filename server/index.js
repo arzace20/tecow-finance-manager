@@ -81,7 +81,7 @@ app.get('/report', (req, res) => {
         }
       }
     ]);
-
+    console.log(results);
     // Convert the results to a JSON object
     const reportData = results.map(result => ({
       _id: result._id,
@@ -91,7 +91,7 @@ app.get('/report', (req, res) => {
       buildingFund: result.buildingFund,
       misc: result.misc
     }));
-
+    console.log(reportData);
     // Send the JSON response
     res.json(reportData);
   });

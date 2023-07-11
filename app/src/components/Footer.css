@@ -24,3 +24,28 @@
     text-align: center;
   }
   
+
+  @media screen and (max-width: 800px) {
+    .footerTitle {
+      color: black;
+      font-weight: bold;
+      font-family: 'Junge', serif;
+      font-size: 60%;
+      text-align: center;
+      display: inline;
+    }
+    .footerText {
+      color: black;
+      font-family: 'Junge', serif;
+      font-size: 40%;
+      text-align: center;
+    }
+    .footerIconContainer {
+      margin: auto;
+      text-align: center;
+    }
+    .footerContainer {
+      width: 100%;
+      margin: 3% 0 0 0;
+    }
+  }
