@@ -65,3 +65,78 @@
     margin: auto;
     width: 711px;
 }
+
+@media screen and (max-width: 800px) {
+    .loginButton12 {
+        max-width: 950px;
+        width: 90px;
+        height: 25px;
+        font-family: 'Jura', sans-serif;
+        border: 1px solid black;
+        font-weight: 600;
+        text-decoration: none;
+        margin: 4% 0 0 15%;
+        padding: 0;
+        border-radius: 5px;
+        background-color: white;
+    }
+    .depositTable {
+        display: block;
+        margin: auto;
+        width: 20%;
+        padding-top: 5%;
+        padding-bottom: 30%;
+    }
+    
+    .tableHead {
+        background-color: #D8D8D8;
+        font-family: 'Jura', sans-serif;
+        border: 1px solid black;
+        
+    }
+    
+    .tableRow1 {
+        font-family: 'Jura', sans-serif;
+        border: 1px solid black;
+        background-color: white;
+    }
+    
+    .depositContainer {
+        background-image: url("../images/background_church.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .refreshPage {
+        font-family: 'Jura', sans-serif;
+        border: 1px solid black;
+        background-color: white; 
+        margin: 1% 10% 0 70%;
+        font-size: 10px;
+    }
+    
+    .newEntryButton {
+        margin: auto;
+        width: 70px;
+        height: 40px;
+        font-family: 'Jura', sans-serif;
+        border: 1px solid black;
+        font-weight: 400;
+        text-decoration: none;
+        margin: 15% 1% 5% 1%;
+        padding: 0;
+        border-radius: 5px;
+        background-color: rgba( 255, 255, 255, 0.5 );
+        font-size: 10px;
+    }
+    
+    .depositButtonGroup {
+        display: block;
+        margin: auto;
+        width: 711px;
+    }
+
+    .TableTypes {
+        font-size: 6px;
+    }
+  }
