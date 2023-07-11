@@ -7,29 +7,29 @@ function Footer() {
   <Table className="footerContainer">
     <thead>
       <tr>
-        <th>
+        <th className="tabelC1">
           <h1 className="footerTitle">ADDRESS</h1>
         </th>
-        <th>
+        <th className="tabelC1">
           <h1 className="footerTitle">MISSAL</h1>
         </th>
-        <th>
+        <th className="tabelC1">
           <h1 className="footerTitle">CONTACT</h1>
         </th>
       </tr>
       
 
     </thead>
-        <tbody>
+        <tbody className="footerTbody">
           <tr>
             <td>
-              <p className="footerText">153 Broadview Avenue, Toronto, Ontario M4M 2E9</p>
+              <p className="footerText">2501 Warden Ave., Scarborough, ON M1W 2L6</p>
             </td>
             <td>
-              <p className="footerText">Mon - Fri: 6am - 7pm<br />​​Sat - Sun: 8am - 8pm</p> 
+              <p className="footerText">Sun 1:30pm</p> 
             </td>
             <td>
-              <p className="footerText">416-850-7413<br />info@stjohnsbakery.com</p>
+              <p className="footerText">(416) 888-0965</p>
             </td>
           </tr>
         </tbody>

@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
 import "./Reports.css"
+import React, { useEffect, useState } from 'react';
 
+/*
 function ReportPage() {
   const [reportData, setReportData] = useState([]);
 
@@ -58,5 +60,49 @@ function ReportPage() {
     </div>
   );
 }
+
+export default ReportPage;
+*/
+
+const ReportPage = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get('/api/deposits'); // Replace '/api/deposits' with the appropriate API endpoint for fetching deposit data
+      setData(response.data);
+    } catch (error) {
+      console.error('Failed to fetch data', error);
+    }
+  };
+
+  return (
+    <div>
+      <h1>Deposit Table</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Member ID</th>
+            <th>Member Name</th>
+            <th>Offerings Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.map((deposit) => (
+            <tr key={deposit._id}>
+              <td>{deposit.memberId}</td>
+              <td>{deposit.memberName}</td>
+              <td>{deposit.offerings.length}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
 
 export default ReportPage;

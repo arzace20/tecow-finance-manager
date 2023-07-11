@@ -11,6 +11,11 @@ import Button from 'react-bootstrap/Button';
 /*window.location.href = "./PrimaryPage.jsx"; */
 
 const Deposit = () => {
+  const [isCollapsed, setIsCollapsed] = useState(true);
+
+  const toggleCollapse = () => {
+    setIsCollapsed(!isCollapsed);
+  };
   const [reportData, setReportData] = useState([]);
 
   const handleReportClick = async () => {
@@ -27,13 +32,26 @@ const Deposit = () => {
   }
 
 
+
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [memberName, setMemberName] = useState("");
     const [weeklyOffering, setWeeklyOffering] = useState("");
     const [tithe, setTithe] = useState("");
     const [specialOffering, setSpecialOffering] = useState("");
     const [buildingFund, setBuildingFund] = useState("");
+    const [easter, setEaster] = useState("");
+    const [revival, setRevival] = useState("");
+    const [thanksgiving, setThanksgiving] = useState("");
+    const [christmas, setChristmas] = useState("");
+    const [watchnight, setWatchnight] = useState("");
+    const [anniversary, setAnniversary] = useState("");
+    const [seminary, setSeminary] = useState("");
+    const [theology, setTheology] = useState("");
+    const [automobile, setAutomobile] = useState("");
+    const [chairs, setChairs] = useState("");
+    const [indigenousMission, setIndigenousMission] = useState("");
     const [misc, setMisc] = useState("");
+
   
     const handleSubmit = async (event) => {
       event.preventDefault();
@@ -51,8 +69,21 @@ const Deposit = () => {
             special: specialOffering,
             buildingFund: buildingFund,
             misc: misc,
+            easter: easter,
+            revival: revival,
+            thanksgiving: thanksgiving,
+            christmas: christmas,
+            watchnight: watchnight,
+            anniversary: anniversary,
+            seminary: seminary,
+            theology: theology,
+            automobile: automobile,
+            chairs: chairs,
+            indigenousMission: indigenousMission
+
           })
         });
+        console.log(response);
         const data = await response.json();
         console.log(data);
       } catch (error) {
@@ -67,16 +98,14 @@ const Deposit = () => {
     const closeModal = () => {
       setIsModalOpen(false);
     };
-  
+    
+    const [reports, setReports] = useState([]);
 
-
-
-
-
-
-
-
-
+    useEffect(() => {
+      fetch("/report")
+        .then((res) => res.json())
+        .then((data) => setReports(data.report));
+      }, []);
 
   return (
       <Container className="depositContainer">
@@ -87,7 +116,7 @@ const Deposit = () => {
           <Button className='newEntryButton' >New Member</Button>{' '}
           <Button className='newEntryButton' onClick={handleReportClick} >Report</Button>{' '}
           </div>
-        <Modal
+        <Modal 
           isOpen={isModalOpen}
           onRequestClose={closeModal}
           style={{
@@ -102,9 +131,12 @@ const Deposit = () => {
               border: '1px solid #ccc',
               borderRadius: '4px',
               boxShadow: '0 2px 10px rgba(0, 0, 0, 0.25)',
-              width: '1200px',
-              height: '850px',
-              padding: '20px'
+              width: '90%',
+              height: '110%',
+              padding: '20px',
+              left: '50%',
+              top: '50%',
+              transform: 'translate(-50%, -50%)',
             }
           }}
         >
@@ -118,8 +150,6 @@ const Deposit = () => {
                 value={memberName}
                 onChange={(e) => setMemberName(e.target.value)}
               />
-              <button className='openMoreButton' onClick={() => setIsModalOpen(true) }>▷</button>
-              <p className='infoIcon'>ⓘ</p>
             </div>
             <div>
               <h3 className='entryTitle'>Weekly Offering</h3>
@@ -166,8 +196,114 @@ const Deposit = () => {
                 onChange={(e) => setMisc(e.target.value)}
               />
             </div>
-  
-            <button className='newEntryButton' onClick={handleSubmit}>Submit</button>
+      <button onClick={toggleCollapse} className="collapseContentButton">↓ Other Offering Items </button>
+      {isCollapsed ? null : (
+        <div className="collapseContent">
+            <div>
+              <h3 className='entryTitle'>Easter</h3>
+              <input
+                className='entryPlaceholder'
+                type="text"
+                value={easter}
+                onChange={(e) => setEaster(e.target.value)}
+              />
+            </div>
+            <div>
+              <h3 className='entryTitle'>Revival</h3>
+              <input
+                className='entryPlaceholder'
+                type="text"
+                value={revival}
+                onChange={(e) => setRevival(e.target.value)}
+              />
+            </div>
+            <div>
+              <h3 className='entryTitle'>Thanksgiving</h3>
+              <input
+                className='entryPlaceholder'
+                type="text"
+                value={thanksgiving}
+                onChange={(e) => setThanksgiving(e.target.value)}
+              />
+            </div>
+            <div>
+              <h3 className='entryTitle'>Christmas</h3>
+              <input
+                className='entryPlaceholder'
+                type="text"
+                value={christmas}
+                onChange={(e) => setChristmas(e.target.value)}
+              />
+            </div>
+            <div>
+              <h3 className='entryTitle'>Watchnight</h3>
+              <input
+                className='entryPlaceholder'
+                type="text"
+                value={watchnight}
+                onChange={(e) => setWatchnight(e.target.value)}
+              />
+            </div>
+            <div>
+              <h3 className='entryTitle'>Anniversary</h3>
+              <input
+                className='entryPlaceholder'
+                type="text"
+                value={anniversary}
+                onChange={(e) => setAnniversary(e.target.value)}
+              />
+            </div>
+            <div>
+              <h3 className='entryTitle'>Seminary</h3>
+              <input
+                className='entryPlaceholder'
+                type="text"
+                value={seminary}
+                onChange={(e) => setSeminary(e.target.value)}
+              />
+            </div>
+            <div>
+              <h3 className='entryTitle'>Theology</h3>
+              <input
+                className='entryPlaceholder'
+                type="text"
+                value={theology}
+                onChange={(e) => setTheology(e.target.value)}
+              />
+            </div>
+            <div>
+              <h3 className='entryTitle'>Automobile</h3>
+              <input
+                className='entryPlaceholder'
+                type="text"
+                value={automobile}
+                onChange={(e) => setAutomobile(e.target.value)}
+              />
+            </div>
+            <div>
+              <h3 className='entryTitle'>Chairs</h3>
+              <input
+                className='entryPlaceholder'
+                type="text"
+                value={chairs}
+                onChange={(e) => setChairs(e.target.value)}
+              />
+            </div>            
+            <div>
+              <h3 className='entryTitle'>Indigenous Mission</h3>
+              <input
+                className='entryPlaceholder'
+                type="text"
+                value={indigenousMission}
+                onChange={(e) => setIndigenousMission(e.target.value)}
+              />
+            </div>
+        </div>
+      )}
+      <div className="sumbitDeposit">
+      <button className='newEntryButton1' onClick={handleSubmit}>Submit</button>
+      </div>
+            
           </div>
         )}
         </Modal>
@@ -185,13 +321,22 @@ const Deposit = () => {
           </tr>
         </thead>
         <tbody>
+        {reports.map(report => {
+            return (
+              <div>
+                <p className="menuPrice">${report.id}</p>
+                <h2 className="menuName">{report.weekly}</h2>
+                <p className="menuDescription">{report.tithe}</p>
+              </div>
+          )})}
+          
           {reportData.map((row) => (
             <tr key={row._id}>
               <td>{row._id}</td>
               <td>{row.weekly}</td>
               <td>{row.tithe}</td>
               <td>{row.special}</td>
-              <td>{row.buldingFund}</td>
+              <td>{row.buildingFund}</td>
               <td>{row.misc}</td>
               <td>
                 {[
