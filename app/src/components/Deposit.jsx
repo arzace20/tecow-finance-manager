@@ -321,35 +321,26 @@ const Deposit = () => {
           </tr>
         </thead>
         <tbody>
-        {reports.map(report => {
-            return (
-              <div>
-                <p className="menuPrice">${report.id}</p>
-                <h2 className="menuName">{report.weekly}</h2>
-                <p className="menuDescription">{report.tithe}</p>
-              </div>
-          )})}
-          
-          {reportData.map((row) => (
-            <tr key={row._id}>
-              <td>{row._id}</td>
-              <td>{row.weekly}</td>
-              <td>{row.tithe}</td>
-              <td>{row.special}</td>
-              <td>{row.buildingFund}</td>
-              <td>{row.misc}</td>
-              <td>
-                {[
-                  row.weekly,
-                  row.tithe,
-                  row.special,
-                  row.buildingFund,
-                  row.misc,
-                ].reduce((acc, cur) => acc + cur, 0)}
-              </td>
-            </tr>
-          ))}
-        </tbody>
+  {reports.map((report) => (
+    <tr key={report._id}>
+      <td>{report._id}</td>
+      <td>{report.weekly}</td>
+      <td>{report.tithe}</td>
+      <td>{report.special}</td>
+      <td>{report.buildingFund}</td>
+      <td>{report.misc}</td>
+      <td>
+        {[
+          report.weekly,
+          report.tithe,
+          report.special,
+          report.buildingFund,
+          report.misc,
+        ].reduce((acc, cur) => acc + cur, 0)}
+      </td>
+    </tr>
+  ))}
+</tbody>
       </Table>
           </Col>
         </Row>
