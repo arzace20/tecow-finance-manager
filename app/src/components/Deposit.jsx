@@ -114,7 +114,7 @@ const Deposit = () => {
           <div className="depositButtonGroup">     
           <Button className='newEntryButton' onClick={() => setIsModalOpen(true)}>New Entry</Button>{' '}
           <Button className='newEntryButton' >New Member</Button>{' '}
-          <Button className='newEntryButton' >Report</Button>{' '}
+          <Button className='newEntryButton' onClick={handleReportClick} >Report</Button>{' '}
           </div>
         <Modal 
           isOpen={isModalOpen}

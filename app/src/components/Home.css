@@ -7,9 +7,38 @@
     font-size: 25px;
     width: auto;
     padding: 25% 40% 25% 40%;
+    
+    margin: 0;
+}
+
+.homeContainer {
     background-image: url("../images/background_church.jpg");
     background-repeat: no-repeat;
     background-size: cover;    
     background-position: center center;
-    margin: 0;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 801px) {
+    .homeChurchName {
+        color: black;
+        font-weight: 700;
+        display: block;
+        font-family: 'Junge', serif;
+        text-align: center;
+        font-size: 10px;
+        width: auto;
+        padding: 25% 40% 25% 40%;
+        
+        margin: 0;
+    }
+
+    .homeContainer {
+        background-image: url("../images/background_church.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;    
+        background-position: center center;
+        width: 100%;
+    }
 }
