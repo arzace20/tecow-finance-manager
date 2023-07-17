@@ -58,3 +58,65 @@
     margin: 0;
     padding: 0;
     }
+
+
+@media screen and (max-width: 801px) {
+    .loginPlaceholder {
+        color: black;
+        font-weight: 700;
+        display: block;;
+        font-family: 'Jura', serif;
+        vertical-align: middle;
+        font-size: 50%;
+        width: 10%;
+        height: 20px;
+        margin: 3% 3% 3% 40%;
+        border-radius: 5px;
+    }
+    
+    .loginTitle {
+        color: black;
+        font-weight: 700;
+        display: block;
+        font-family: 'Jura', serif;
+        text-align: center;
+        font-size: 25px;
+        width: auto;
+        padding-top: 30px;
+    }
+    
+    .loginButton1 {
+        width: 90px;
+        height: 27px;
+        font-family: 'Jura', sans-serif;
+        border: 1px solid black;
+        font-weight: 600;
+        text-decoration: none;
+        margin: 2% 0 0 35%;
+        padding: 0;
+        border-radius: 5px;
+        background-color: #F0D4D4;
+    }
+    
+    .loginButton2 {
+        width: 90px;
+        height: 27px;
+        font-family: 'Jura', sans-serif;
+        border: 1px solid black;
+        font-weight: 600;
+        text-decoration: none;
+        margin: 2% 0 0 4%;
+        padding: 0;
+        border-radius: 5px;
+        background-color: #D4E8F0;
+    }
+    
+    .loginDiv {
+        background: url("../images/background_church.jpg") no-repeat transparent;
+        height: 500px;
+        background-size: cover;    
+        background-position: center center;
+        margin: 0;
+        padding: 0;
+        }
+}    

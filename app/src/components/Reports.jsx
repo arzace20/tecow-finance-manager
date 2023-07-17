@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-=======
-import React, { useState } from 'react';
-import axios from 'axios';
-import Button from 'react-bootstrap/Button';
-import Table from 'react-bootstrap/Table';
-import "./Reports.css"
->>>>>>> 71f1d90b5e151bd047261716c74f3b83238bb89c
 
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
@@ -28,17 +20,10 @@ function ReportPage() {
   };
 
   return (
-<<<<<<< HEAD
     <div className='reportDiv'>
       <Button className='ReportButton'>Monthly Report</Button>
       <Button className='ReportButton' onClick={handleReportClick}>Generate Report</Button>
       <Table striped bordered hover className='reportTable'>
-=======
-    <div>
-      <Button className='ReportButton'>Monthly Report</Button>
-      <Button className='ReportButton' onClick={handleReportClick}>Generate Report</Button>
-      <Table striped bordered hover>
->>>>>>> 71f1d90b5e151bd047261716c74f3b83238bb89c
         <thead>
           <tr>
             <th className='TableTypes'>Member ID</th>
@@ -72,7 +57,6 @@ function ReportPage() {
           ))}
         </tbody>
       </Table>
-<<<<<<< HEAD
     </div>
   );
 }
@@ -117,8 +101,6 @@ const ReportPage = () => {
           ))}
         </tbody>
       </table>
-=======
->>>>>>> 71f1d90b5e151bd047261716c74f3b83238bb89c
     </div>
   );
 };

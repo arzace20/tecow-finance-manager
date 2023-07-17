@@ -46,11 +46,7 @@ const PrimaryPage = () => {
   };
 
   return (
-<<<<<<< HEAD
     <div className='newEntryDiv'>
-=======
-    <div>
->>>>>>> 71f1d90b5e151bd047261716c74f3b83238bb89c
       <Button className='newEntryButton' onClick={() => setIsModalOpen(true)}>New Entry</Button>{' '}
       <Modal
         isOpen={isModalOpen}
@@ -131,10 +127,6 @@ const PrimaryPage = () => {
               onChange={(e) => setMisc(e.target.value)}
             />
           </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> 71f1d90b5e151bd047261716c74f3b83238bb89c
           <button className='newEntryButton' onClick={handleSubmit}>Submit</button>
         </div>
       )}

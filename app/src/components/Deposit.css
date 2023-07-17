@@ -65,7 +65,6 @@
     margin: auto;
     width: 711px;
 }
-<<<<<<< Updated upstream
 
 @media screen and (max-width: 800px) {
     .loginButton12 {
@@ -143,9 +142,7 @@
   }
 
 .depositModal {
-    margin: auto;
-=======
->>>>>>> Stashed changes
+    margin: auto;}
 
 @media screen and (max-width: 800px) {
     .loginButton12 {
@@ -217,7 +214,6 @@
         width: 711px;
     }
 
-<<<<<<< Updated upstream
 }
 
 .collapseContentButton {
@@ -236,9 +232,3 @@
     background-color: #B7E1E1;
 }
 
-=======
-    .TableTypes {
-        font-size: 6px;
-    }
-  }
->>>>>>> Stashed changes
