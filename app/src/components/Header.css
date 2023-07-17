@@ -5,6 +5,7 @@
 
 
 .headerWebsiteName {
+<<<<<<< HEAD
   position: absolute;
     display: inline;
     padding-right: 10%;
@@ -15,6 +16,59 @@
     margin: 0 0 0 2%;
   }
   
+=======
+    
+    background-position-x: 50%;
+    background-position-y: 72%;
+    margin: auto;
+    text-align: center;
+    color: black;
+    font-weight: 700;
+    display: inline;;
+    font-family: 'Junge', serif;
+    padding-top: 1%;
+    padding-bottom: 20%;
+    padding-right: 80%;
+    font-size: 100%;
+  }
+  
+  @media screen and (max-width: 800px) {
+    .homeNavBar {
+      height: 26px;
+      z-index: 1;
+    }
+    .homeButton {
+      display: inline;
+    }
+    .NavbarName {
+      margin: auto;
+      width: 950px;
+      color: #3E2B1C;
+      font-weight: 700;
+      font-family: "Playfair Display", serif;
+      font-size: 11px;
+      padding: 6px 0 2px 0;
+      height: 26px;
+    }
+    .headerWebsiteName {
+      background: url("../images/WebsiteLogo.png") no-repeat;
+      background-position-x: 50%;
+      background-position-y: 72%;
+      margin: auto;
+      text-align: center;
+      color: #3E2B1C;
+      font-weight: 700;
+      display: block;
+      font-family: "Playfair Display", serif;
+      padding-top: 58px;
+      padding-bottom: 30px;
+      font-size: 24px;
+    }
+    .homeButton11 {
+      display: inline;
+    }
+  }
+>>>>>>> 71f1d90b5e151bd047261716c74f3b83238bb89c
   
   .homeButton {
     width: 190px;
@@ -24,7 +78,16 @@
   .headerButtons {
     padding: 0 0 0 0;
   }
+<<<<<<< HEAD
 
+=======
+  .homeNavBar {
+    background: url("../images/background_church.jpg") no-repeat;
+    height: 56px;
+  }
+  
+  
+>>>>>>> 71f1d90b5e151bd047261716c74f3b83238bb89c
   .headerDiv {
     padding-bottom: 3%;
     background-color: white;
@@ -84,6 +147,7 @@
       padding: 0 0 0 0;
     }
   
+<<<<<<< HEAD
     .headerDiv {
       padding-bottom: 35px;
     }
@@ -113,3 +177,16 @@
     padding: 0 2px 0 48%;
 
   }
+=======
+  .NavbarName {
+    margin: auto;
+    width: 190px;
+    color: #3E2B1C;
+    font-weight: 700;
+    font-family: 'Junge', serif;
+    font-size: 22px;
+    padding: 12px 0 5px 0;
+    height: 56px;
+  }
+  
+>>>>>>> 71f1d90b5e151bd047261716c74f3b83238bb89c

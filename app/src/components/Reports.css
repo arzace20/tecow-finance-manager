@@ -7,10 +7,16 @@
     border: 1px solid black;
     font-weight: 600;
     text-decoration: none;
+<<<<<<< HEAD
     margin: 5% 0 5% 5%;
     padding: 0;
     border-radius: 5px;
 
+=======
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+>>>>>>> 71f1d90b5e151bd047261716c74f3b83238bb89c
 }
 
 .TableTypes {
@@ -18,6 +24,7 @@
     padding: 0 5% 0 5%;
     width: 10%;
     border: 1px solid black;
+<<<<<<< HEAD
     background-color: white;
 
 }
@@ -33,4 +40,6 @@
     background-image: url("../images/background_church.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+=======
+>>>>>>> 71f1d90b5e151bd047261716c74f3b83238bb89c
 }
