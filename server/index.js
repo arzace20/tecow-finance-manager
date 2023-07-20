@@ -53,14 +53,9 @@ app.get("/api", (req, res) => {
     res.json({ message: "Hello from server!"});
 });
 
-app.get('/report', (req, res) => {
-  // Get the MongoDB connection
-  const db = mongoose.connection;
-
-  // Wait for the connection to be established
-  db.once('open', () => {
-    // Run the MongoDB query
-    const results = db.collection('deposits').aggregate([
+app.get('/report', async (req, res) => {
+  try {
+    const reportData = await Deposit.aggregate([
       {
         $group: {
           "_id": "$memberId",
@@ -82,20 +77,13 @@ app.get('/report', (req, res) => {
         }
       }
     ]);
-    console.log(results);
-    // Convert the results to a JSON object
-    const reportData = results.map(result => ({
-      _id: result._id,
-      weekly: result.weekly,
-      tithe: result.tithe,
-      special: result.special,
-      buildingFund: result.buildingFund,
-      misc: result.misc
-    }));
-    console.log(reportData);
-    // Send the JSON response
+
+    console.log(reportData); // Log the fetched data to the console
+
     res.json(reportData);
-  });
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to fetch data' });
+  }
 });
 
 
