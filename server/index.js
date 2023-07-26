@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const moment = require('moment');
+const routes = require('./routes');
 
 const PORT = process.env.PORT || 3001;
 
@@ -53,6 +54,7 @@ app.get("/api", (req, res) => {
     res.json({ message: "Hello from server!"});
 });
 
+/*
 app.get('/report', (req, res) => {
   // Get the MongoDB connection
   const db = mongoose.connection;
@@ -97,7 +99,8 @@ app.get('/report', (req, res) => {
     res.json(reportData);
   });
 });
-
+*/
+app.use('/', routes);
 
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../app/build', 'index.html'));
