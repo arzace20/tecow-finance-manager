@@ -5,16 +5,16 @@
 
 
 .headerWebsiteName {
-  position: absolute;
-    display: inline;
-    padding-right: 10%;
-    vertical-align: middle;
+    display: block;
     font-size: 110%;
-    width: 20%;
+    width: auto;
     font-family: 'Junge', serif;
-    margin: 0 0 0 2%;
+    margin: 2% 0 0 10%;
   }
   
+.th {
+  width: 40%;
+}
   
   .homeButton {
     width: 190px;
@@ -25,7 +25,7 @@
     padding: 0 0 0 0;
   }
   .headerDiv {
-    padding-bottom: 3%;
+    padding-bottom: 2%;
     background-color: white;
   }
   .navbarCol {
@@ -60,9 +60,10 @@
 
   .iconHeaderImg1 {
     width: 1.5%;
-
-    padding: 0 2px 0 51%;
-  }
+    padding: 0 2px 0 10%;
+    margin: 0 0 0 50%;
+    }
+  
 
   @media screen and (max-width: 800px) {
 
@@ -72,10 +73,11 @@
       font-size: 50%;
       width: 20%;
       font-family: 'Junge', serif;
-      margin: 0 0% 0 2%;
+      margin: 0 0 0 2%;
     }
     .homeButton {
-      display: none;
+      width: 190px;
+      height: 100px;
     }
     
     .headerButtons {
@@ -96,9 +98,8 @@
     }
   
     .iconHeaderImg {
-      width: 15%;
-      padding: 0;
-      margin: 0 2px 0 8px;
+      width: 1.5%;
+      padding: 0 2px 0 2px;
     }
   
     .s1 {
@@ -106,9 +107,9 @@
     }
   
     .iconHeaderImg1 {
-      width: 15%;
-      margin: 0 2px 0 0;
-      padding: 0;
-    }
+      width: 1.5%;
+      padding: 0 2px 0 10%;
+      margin: 2% 0 0 50%;
+      }
 
   }

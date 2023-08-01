@@ -131,6 +131,10 @@
         font-size: 10px;
     }
     
+    .newEntryButton1 {
+        font-size: 50px;
+    }
+    
     .depositButtonGroup {
         display: block;
         margin: auto;
@@ -140,13 +144,26 @@
     .TableTypes {
         font-size: 6px;
     }
+    .newEntryButton1 {
+        margin: auto;
+        width: 70px;
+        height: 40px;
+        font-family: 'Jura', sans-serif;
+        border: 1px solid black;
+        font-weight: 400;
+        text-decoration: none;
+        margin: 15% 1% 30% 5%;
+        padding: 0;
+        border-radius: 5px;
+        background-color: rgba( 255, 255, 255, 0.5 );
+        font-size: medium;
+    }
   }
 
 .depositModal {
 
     margin: auto;}
 
-    margin: auto;
 
 
 @media screen and (max-width: 800px) {
@@ -242,5 +259,4 @@
     .TableTypes {
         font-size: 6px;
     }
-  }
-
+  
