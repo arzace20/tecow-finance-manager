@@ -65,44 +65,50 @@ export default ReportPage;
 */
 
 const ReportPage = () => {
-  const [data, setData] = useState([]);
 
+  
+  const [reportData, setReportData] = useState([]);
+    
   useEffect(() => {
-    fetchData();
+    // Fetch data from the server
+    fetch('/report')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data); // Log the received data to the console
+        setReportData(data);
+      })
+      .catch(error => console.error('Error fetching data:', error));
   }, []);
-
-  const fetchData = async () => {
-    try {
-      const response = await axios.get('/api/deposits'); // Replace '/api/deposits' with the appropriate API endpoint for fetching deposit data
-      setData(response.data);
-    } catch (error) {
-      console.error('Failed to fetch data', error);
-    }
-  };
-
-  return (
-    <div>
-      <h1>Deposit Table</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>Member ID</th>
-            <th>Member Name</th>
-            <th>Offerings Count</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.map((deposit) => (
-            <tr key={deposit._id}>
-              <td>{deposit.memberId}</td>
-              <td>{deposit.memberName}</td>
-              <td>{deposit.offerings.length}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
-};
+    
+      return (
+        <div>
+          <h2>Report Table</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Member ID</th>
+                <th>Weekly</th>
+                <th>Tithe</th>
+                <th>Special</th>
+                <th>Building Fund</th>
+                <th>Misc</th>
+              </tr>
+            </thead>
+            <tbody>
+              {reportData.map(item => (
+                <tr key={item._id}>
+                  <td>{item._id}</td>
+                  <td>${item.weekly}</td>
+                  <td>${item.tithe}</td>
+                  <td>${item.special}</td>
+                  <td>${item.buildingFund}</td>
+                  <td>${item.misc}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      );
+    };
 
 export default ReportPage;

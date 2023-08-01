@@ -127,7 +127,6 @@ const PrimaryPage = () => {
               onChange={(e) => setMisc(e.target.value)}
             />
           </div>
-
           <button className='newEntryButton' onClick={handleSubmit}>Submit</button>
         </div>
       )}

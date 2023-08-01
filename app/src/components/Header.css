@@ -24,7 +24,6 @@
   .headerButtons {
     padding: 0 0 0 0;
   }
-
   .headerDiv {
     padding-bottom: 3%;
     background-color: white;
@@ -73,11 +72,10 @@
       font-size: 50%;
       width: 20%;
       font-family: 'Junge', serif;
-      margin: 0 0 0 2%;
+      margin: 0 0% 0 2%;
     }
     .homeButton {
-      width: 190px;
-      height: 100px;
+      display: none;
     }
     
     .headerButtons {
@@ -98,8 +96,9 @@
     }
   
     .iconHeaderImg {
-      width: 1.5%;
-      padding: 0 2px 0 2px;
+      width: 15%;
+      padding: 0;
+      margin: 0 2px 0 8px;
     }
   
     .s1 {
@@ -107,9 +106,9 @@
     }
   
     .iconHeaderImg1 {
-      width: 1.5%;
-      padding: 0 2px 0 10%;
+      width: 15%;
+      margin: 0 2px 0 0;
+      padding: 0;
     }
-    padding: 0 2px 0 48%;
 
   }
