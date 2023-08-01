@@ -24,23 +24,22 @@ import {Container, Row, Col, Navbar} from "react-bootstrap"
   return (
     <div className="headerDiv">
           <Navbar fixed="top" className="s1" >
-            <Col className="navbarCol" >
-              <h3 className="headerWebsiteName" onClick={redirectToHome}>TECOW Finance Manager</h3>
-              <div className="headerButtondiv">
-              <a href="deposit">
-                <img src="./images/deposit.png" alt="deposit" className="iconHeaderImg1"/>
-              </a>
+          <table className="navbarCol">
+      <thead >
+        <tr>
+          <th><h3 className="headerWebsiteName" onClick={redirectToHome}>TECOW Finance Manager</h3></th>
+          <th></th>
+          <th><img src="./images/deposit.png" alt="deposit" className="iconHeaderImg1"/>
               <HomeButton className="headerWebsiteName" buttonName="Deposits" path="/deposit"/>
-              <a href="reports">
-                <img src="./images/expense.png" alt="expense" className="iconHeaderImg"/>
-              </a>
+              <img src="./images/expense.png" alt="expense" className="iconHeaderImg"/>
               <HomeButton className="headerWebsiteName" buttonName="Expenses" path="/reports"/>
-              <a href="login">
               <img src="./images/login.png" alt="log in" className="iconHeaderImg"/>
-              </a>
               <HomeButton className="headerWebsiteName" buttonName="Log in" path="/login"/>
-              </div>
-            </Col>
+              </th>
+        </tr>
+      </thead>
+      </table>
+          
             </Navbar>
       
     </div>

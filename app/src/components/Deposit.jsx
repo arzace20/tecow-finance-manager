@@ -144,7 +144,7 @@ const Deposit = () => {
           <div className='entryDiv'>
             <div>
               <input
-                className='entryPlaceholder'
+                className='entryPlaceholder1'
                 type="text"
                 placeholder="Congregation Member Name"
                 value={memberName}

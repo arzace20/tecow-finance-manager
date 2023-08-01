@@ -36,6 +36,12 @@
     margin: 0 0 0 5%;
 }
 
+.entryPlaceholder1 {
+    width: 50%;
+    height: 40px;
+    margin: 5% 0 0 5%;
+}
+
 .entryDiv {
 background-color: #B7E1E1;
 height: 1000px;
