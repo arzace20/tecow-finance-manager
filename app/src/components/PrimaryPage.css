@@ -1,5 +1,3 @@
-
-
 .openMoreButton {
     margin: auto;
     max-width: 950px;
@@ -51,8 +49,7 @@ margin: 0;
 padding: 5% 0 0 0;
 }
 
-.newEntryDiv {
-    background: url("../images/background_church.jpg") no-repeat;
+.newEntryDiv { background: url("../images/background_church.jpg") no-repeat;
     height: 1000px;
     background-size: cover;    
     background-position: center center;
