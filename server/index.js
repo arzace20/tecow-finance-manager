@@ -1,7 +1,6 @@
 const express = require('express');
 const path = require('path');
 const moment = require('moment');
-const routes = require('./routes');
 
 const PORT = process.env.PORT || 3001;
 
@@ -54,21 +53,9 @@ app.get("/api", (req, res) => {
     res.json({ message: "Hello from server!"});
 });
 
-
 app.get('/report', async (req, res) => {
   try {
     const reportData = await Deposit.aggregate([
-
-/*
-app.get('/report', (req, res) => {
-  // Get the MongoDB connection
-  const db = mongoose.connection;
-
-  // Wait for the connection to be established
-  db.once('open', () => {
-    // Run the MongoDB query
-    const results = db.collection('deposits').aggregate([
-
       {
         $group: {
           "_id": "$memberId",
@@ -98,8 +85,7 @@ app.get('/report', (req, res) => {
     res.status(500).json({ error: 'Failed to fetch data' });
   }
 });
-*/
-app.use('/', routes);
+
 
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../app/build', 'index.html'));
