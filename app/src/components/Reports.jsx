@@ -81,28 +81,28 @@ const ReportPage = () => {
   }, []);
     
       return (
-        <div>
-          <h2>Report Table</h2>
+        <div className='reportDiv'>
+          <h2  className='reportTableHeader'>Report Table</h2>
           <table>
             <thead>
               <tr>
-                <th>Member ID</th>
-                <th>Weekly</th>
-                <th>Tithe</th>
-                <th>Special</th>
-                <th>Building Fund</th>
-                <th>Misc</th>
+                <th className='reportTableHeader'>Member ID</th>
+                <th className='reportTableHeader'>Weekly</th>
+                <th className='reportTableHeader'>Tithe</th>
+                <th className='reportTableHeader'>Special</th>
+                <th className='reportTableHeader'>Building Fund</th>
+                <th className='reportTableHeader'>Misc</th>
               </tr>
             </thead>
             <tbody>
               {reportData.map(item => (
                 <tr key={item._id}>
-                  <td>{item._id}</td>
-                  <td>${item.weekly}</td>
-                  <td>${item.tithe}</td>
-                  <td>${item.special}</td>
-                  <td>${item.buildingFund}</td>
-                  <td>${item.misc}</td>
+                  <td className='reportTableData'>{item._id}</td>
+                  <td className='reportTableData'>${item.weekly}</td>
+                  <td className='reportTableData'>${item.tithe}</td>
+                  <td className='reportTableData'>${item.special}</td>
+                  <td className='reportTableData'>${item.buildingFund}</td>
+                  <td className='reportTableData'>${item.misc}</td>
                 </tr>
               ))}
             </tbody>
