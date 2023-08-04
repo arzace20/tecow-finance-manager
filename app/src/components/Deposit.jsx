@@ -8,7 +8,28 @@ import Modal from 'react-modal';
 import "./PrimaryPage.css"
 import Button from 'react-bootstrap/Button';
 
-/*window.location.href = "./PrimaryPage.jsx"; */
+/*{reports.map((report) => (
+  <tr key={report._id}>
+    <td>{report._id}</td>
+    <td>{report.weekly}</td>
+    <td>{report.tithe}</td>
+    <td>{report.special}</td>
+    <td>{report.buildingFund}</td>
+    <td>{report.misc}</td>
+    <td>
+      {[
+        report.weekly,
+        report.tithe,
+        report.special,
+        report.buildingFund,
+        report.misc,
+      ].reduce((acc, cur) => acc + cur, 0)}
+    </td>
+  </tr>
+))}*/
+
+
+
 
 const Deposit = () => {
   const [isCollapsed, setIsCollapsed] = useState(true);
@@ -301,7 +322,7 @@ const Deposit = () => {
         </div>
       )}
       <div className="sumbitDeposit">
-      <button className='newEntryButton1' onClick={handleSubmit}>Submit</button>
+      <button className='sumbitDepositButton' onClick={handleSubmit}>Submit</button>
       </div>
             
           </div>
@@ -321,25 +342,9 @@ const Deposit = () => {
           </tr>
         </thead>
         <tbody>
-  {reports.map((report) => (
-    <tr key={report._id}>
-      <td>{report._id}</td>
-      <td>{report.weekly}</td>
-      <td>{report.tithe}</td>
-      <td>{report.special}</td>
-      <td>{report.buildingFund}</td>
-      <td>{report.misc}</td>
-      <td>
-        {[
-          report.weekly,
-          report.tithe,
-          report.special,
-          report.buildingFund,
-          report.misc,
-        ].reduce((acc, cur) => acc + cur, 0)}
-      </td>
-    </tr>
-  ))}
+  
+
+
 </tbody>
       </Table>
           </Col>
