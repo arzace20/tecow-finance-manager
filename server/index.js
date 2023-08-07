@@ -14,7 +14,10 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 mongoose.connect('mongodb+srv://admin:Word0965@cluster0.pmmdn.mongodb.net/Church?retryWrites=true&w=majority', { useNewUrlParser: true  });
   
-
+const userSchema = new mongoose.Schema({
+  username: String,
+  password: String
+});
 
 const depositSchema = new mongoose.Schema({
   memberId: Number,
@@ -30,6 +33,69 @@ const depositSchema = new mongoose.Schema({
     }
   ]
 });
+
+
+
+const User = mongoose.model('User', userSchema);
+
+const session = require('express-session');
+const bcrypt = require('bcrypt');
+
+app.use(
+  session({
+    secret: '21006356',
+    resave: true,
+    saveUninitialized: true
+  })
+);
+
+app.post('/login', async (req, res) => {
+  const { username, password } = req.body;
+
+  try {
+    const user = await User.findOne({ username });
+
+    if (user && await bcrypt.compare(password, user.password)) {
+      // Successful login
+      req.session.user = user; // Store user data in the session
+      res.redirect('/dashboard'); // Redirect to the dashboard page
+    } else {
+      // Invalid credentials
+      res.status(401).send('Invalid login credentials');
+    }
+  } catch (error) {
+    res.status(500).send('An error occurred');
+  }
+});
+
+app.post('/register', async (req, res) => {
+  const { username, password } = req.body;
+
+  try {
+    const hashedPassword = await bcrypt.hash(password, 10); // Hash the password
+    const newUser = new User({ username, password: hashedPassword });
+    await newUser.save();
+
+    res.status(200).send('User registered successfully');
+  } catch (error) {
+    res.status(500).send('An error occurred');
+  }
+});
+
+
+function requireLogin(req, res, next) {
+  if (req.session.user) {
+    next(); // User is authenticated, proceed to the next middleware/route
+  } else {
+    res.redirect('/login'); // Redirect to the login page if not authenticated
+  }
+}
+
+app.get('/dashboard', requireLogin, (req, res) => {
+  // Render the dashboard page for authenticated users
+});
+
+
 
 const Deposit = mongoose.model('Deposit', depositSchema);
 
