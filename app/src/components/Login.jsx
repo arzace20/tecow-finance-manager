@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import HomeButton from "./HomeButton";
 import './Login.css';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 
@@ -99,9 +100,7 @@ const Login = () => {
         <button className="loginButton1" onClick={handleSubmit}>
           Login
         </button>
-        <button className="loginButton2" onClick={handleSignUp}>
-          Sign up
-        </button>
+        <HomeButton className="headerWebsiteName" buttonName="Sign up" path="/signup" onClick={handleSignUp} />
       </div>
     </div>
   );
