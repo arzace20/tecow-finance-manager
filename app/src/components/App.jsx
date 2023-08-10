@@ -5,6 +5,7 @@ import Deposit from './Deposit';
 import Reports from './Reports';
 import Home from "./Home";
 import Login from "./Login";
+import Signup from "./Signup";
 import Footer from "./Footer";
 import './App.css';
 import {Route, Routes} from "react-router-dom";
@@ -27,6 +28,7 @@ function App() {
       <Route path="/reports" element={<Reports />} />
       <Route path="/login" element={<Login/>} />
       <Route path="/newEntry" element={<PrimaryPage/>} />
+      <Route path="/signup" element={<Signup/>} />
     </Routes>
     <Footer />
   </div>
