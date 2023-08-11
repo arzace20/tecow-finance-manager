@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
-import HomeButton from "./HomeButton";
+import SimpleButton from "./SimpleButton";
 import './Login.css';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 
@@ -100,7 +100,7 @@ const Login = () => {
         <button className="loginButton1" onClick={handleSubmit}>
           Login
         </button>
-        <HomeButton className="headerWebsiteName" buttonName="Sign up" path="/signup" onClick={handleSignUp} />
+        <SimpleButton className="headerWebsiteName" buttonName="Sign up" path="/signup" onClick={handleSignUp} />
       </div>
     </div>
   );
