@@ -8,27 +8,6 @@ import Modal from 'react-modal';
 import "./PrimaryPage.css"
 import Button from 'react-bootstrap/Button';
 
-/*{reports.map((report) => (
-  <tr key={report._id}>
-    <td>{report._id}</td>
-    <td>{report.weekly}</td>
-    <td>{report.tithe}</td>
-    <td>{report.special}</td>
-    <td>{report.buildingFund}</td>
-    <td>{report.misc}</td>
-    <td>
-      {[
-        report.weekly,
-        report.tithe,
-        report.special,
-        report.buildingFund,
-        report.misc,
-      ].reduce((acc, cur) => acc + cur, 0)}
-    </td>
-  </tr>
-))}*/
-
-
 
 
 const Deposit = () => {
@@ -53,7 +32,7 @@ const Deposit = () => {
   }
 
 
-
+    const [offerings, setOfferings] = useState({});
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [memberName, setMemberName] = useState("");
     const [weeklyOffering, setWeeklyOffering] = useState("");
@@ -107,10 +86,33 @@ const Deposit = () => {
         console.log(response);
         const data = await response.json();
         console.log(data);
+        setOfferings((prevOfferings) => ({
+          ...prevOfferings,
+          [memberName]: {
+            date: new Date(),
+            weekly: weeklyOffering,
+            tithe: tithe,
+            special: specialOffering,
+            buildingFund: buildingFund,
+            misc: misc,
+            easter: easter,
+            revival: revival,
+            thanksgiving: thanksgiving,
+            christmas: christmas,
+            watchnight: watchnight,
+            anniversary: anniversary,
+            seminary: seminary,
+            theology: theology,
+            automobile: automobile,
+            chairs: chairs,
+            indigenousMission: indigenousMission,
+          },
+        }));
       } catch (error) {
         console.error(error);
       }
     };
+
   
     const openModal = () => {
       setIsModalOpen(true);
@@ -176,7 +178,7 @@ const Deposit = () => {
               <h3 className='entryTitle'>Weekly Offering</h3>
               <input
                 className='entryPlaceholder'
-                type="text"
+                type="number"
                 value={weeklyOffering}
                 onChange={(e) => setWeeklyOffering(e.target.value)}
               />
