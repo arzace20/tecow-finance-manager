@@ -1,16 +1,8 @@
-
-import axios from 'axios';
-import Button from 'react-bootstrap/Button';
-import Table from 'react-bootstrap/Table';
-import "./Reports.css"
 import React, { useEffect, useState } from 'react';
 
-
 const ReportPage = () => {
-
-  
   const [reportData, setReportData] = useState([]);
-    
+
   useEffect(() => {
     // Fetch data from the server
     fetch('/report')
@@ -21,36 +13,46 @@ const ReportPage = () => {
       })
       .catch(error => console.error('Error fetching data:', error));
   }, []);
-    
-      return (
-        <div className='reportDiv'>
-          <h2  className='reportTableHeader'>Report Table</h2>
-          <table>
-            <thead>
-              <tr>
-                <th className='reportTableHeader'>Member ID</th>
-                <th className='reportTableHeader'>Weekly</th>
-                <th className='reportTableHeader'>Tithe</th>
-                <th className='reportTableHeader'>Special</th>
-                <th className='reportTableHeader'>Building Fund</th>
-                <th className='reportTableHeader'>Misc</th>
-              </tr>
-            </thead>
-            <tbody>
-              {reportData.map(item => (
-                <tr key={item._id}>
-                  <td className='reportTableData'>{item._id}</td>
-                  <td className='reportTableData'>${item.weekly}</td>
-                  <td className='reportTableData'>${item.tithe}</td>
-                  <td className='reportTableData'>${item.special}</td>
-                  <td className='reportTableData'>${item.buildingFund}</td>
-                  <td className='reportTableData'>${item.misc}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      );
-    };
+
+  return (
+    <div className='reportDiv'>
+      <h2 className='reportTableHeader'>Report Table</h2>
+      <table>
+        <thead>
+          <tr>
+            <th className='reportTableHeader'>Member ID</th>
+            <th className='reportTableHeader'>Weekly</th>
+            <th className='reportTableHeader'>Tithe</th>
+            <th className='reportTableHeader'>Special</th>
+            <th className='reportTableHeader'>Building Fund</th>
+            <th className='reportTableHeader'>Misc</th>
+          </tr>
+        </thead>
+        <tbody>
+          {reportData.map(item => (
+            <tr key={item._id}>
+              <td className='reportTableData'>{item._id}</td>
+              <td className='reportTableData'>
+                ${item.offerings && item.offerings[0] ? item.offerings[0].weekly : 0}
+              </td>
+              <td className='reportTableData'>
+                ${item.offerings && item.offerings[0] ? item.offerings[0].tithe : 0}
+              </td>
+              <td className='reportTableData'>
+                ${item.offerings && item.offerings[0] ? item.offerings[0].special : 0}
+              </td>
+              <td className='reportTableData'>
+                ${item.offerings && item.offerings[0] ? item.offerings[0].buildingFund : 0}
+              </td>
+              <td className='reportTableData'>
+                ${item.offerings && item.offerings[0] ? item.offerings[0].misc : 0}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
 
 export default ReportPage;
